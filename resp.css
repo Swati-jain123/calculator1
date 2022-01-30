@@ -1,0 +1,26 @@
+@media screen and (max-width:500px){
+    body{
+        background-attachment: fixed;
+    }
+   .hello p {
+       margin-left: 1vw;
+       display: flex;
+       justify-content: center;
+       width: fit-content;
+       height: 180px;
+       font-size: 20px;
+       color:rgb(79, 14, 185);
+       text-align:center;
+       
+       
+
+   }
+   .para{
+      font-size: 30px;
+      margin-left: 10vw;
+      color: brown;
+      font-weight: bolder;
+      
+  }
+   
+}
