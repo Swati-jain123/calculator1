@@ -1,0 +1,53 @@
+@media screen and (max-width:500px) {
+    body {
+      background-color: rgba(151, 222, 235, 0.966);
+
+      background-attachment: fixed;
+      margin: 10px;
+      width: 90vw;
+      height: 90vh;
+    }
+
+    main {
+      background-attachment: fixed;
+      margin: 0px 0px;
+      margin-top: 30px;
+
+
+      width: 60vw;
+      height: 75vh;
+
+
+    }
+
+    .swati {
+      background-attachment: fixed;
+      display: grid;
+      grid-template-rows: 100px;
+      grid-template-columns: 100px 100px 100px;
+
+    }
+
+    .hello {
+
+      background-attachment: fixed;
+      display: grid;
+      grid-template-columns: 22vw 22vw 22vw 22vw;
+      grid-template-rows: 10vh 10vh 10vh 10vh 10vh;
+      width: fit-content;
+      height: 70vh;
+      margin-left: -50px;
+
+    }
+
+    input {
+      background-attachment: fixed;
+      margin-top: -30px;
+      height: 70px;
+      width: 85vw;
+
+    }
+
+  }
+
+ 

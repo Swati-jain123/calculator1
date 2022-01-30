@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+         body{
+            background-color: rgba(151, 222, 235, 0.966);
+          margin-top: -20px;
+        }
+        
+        .hello{
+        
+            margin-top: 22px;
+           margin-left: -50px;
+            display: flex;
+            justify-content: center;
+            display: grid;
+             grid-template-columns: 135px 135px 135px 135px ;
+             grid-template-rows: 100px 100px 100px 100px 100px 100px ;
+             width: 540px;
+             height: 700px;
+             background-color: rgba(67, 66, 70, 0.959);
+             border-radius: 12px;
+             
+            
+        }
+        .hello button {      
+            background-color:rgba(5, 0, 0, 0.753);
+            border-radius: 10px;
+
+            cursor: pointer;
+        }
+        .hello :hover{
+            color:yellow;
+            font-size: 40px;
+            font-weight: bolder;
+        }
+        input {
+        
+            
+            width: 533px;
+            margin-left: -50px;
+            height: 90px;
+            font-size: 35px;
+            background-color:rgb(249, 250, 239);
+            display: flex;
+            justify-content: space-between;
+            border-radius: 12px;
+        }
+       button[value]{
+           color:whitesmoke;
+           font-size: 31px;
+           font:bolder;
+       }
+      .swati{
+          display: grid;
+          grid-template-rows: 100px;
+          grid-template-columns: 180px 180px 180px;
+        
+      }
+      main {
+        margin-left: 700px;
+          
+          margin-top: 50px;
+          border: 70px solid rgba(116, 103, 103, 0.87);
+          width: 450px;
+          height: 790px;
+           border-radius: 55px;
+           background-color:rgba(117, 104, 104);      }
+    </style> 
+</head>
+ 
+<body>
+    
+<form name="calculator" >
+    <main class="bd">
+    
+    <input type="text" name="result" >
+
+    <div class="hello">
+        <button type="button" value="sin()" onclick="sin()" >sin</button>
+        <button type="button" value="cos" onclick="cos()">cos</button>
+   
+        <button type="button" value="tan" onclick="tan()">tan</button>
+       
+        <button type="button" value="x^2" onclick="square()"> x<sup>2 </button> 
+           <button type="button" value="x^3" onclick="cubed()"> x<sup>3 </button>
+           <button type="button" value="sqrt2" onclick="sqrt2()"> &radic; </button>
+   
+           <button type="button" value="sqrt3" onclick="sqrt3()"> &#8731; </button> 
+           <button type="button" value="%" onclick="number(value)"> % </button>
+      
+        <button type="button" value="C" class="clear" onclick="remv()"> Clear </button>
+        
+     <button type="button" value="log" onclick="log()"> log</button> 
+     <button  type="button" value="." onclick="number(value)" >. </button>
+        <button type="button" value="BACKSPC" onclick="BACKSPC()"> del </button>
+        
+     
+    
+     <button type="button" value="1" onclick="number(value)" > 1 </button> 
+      <button type="button" value="2" onclick="number(value)" >2 </button>
+      
+     <button type="button" value="3" onclick="number(value)" > 3 </button> 
+     <button type="button" value="/" onclick="number(value)"> /</button>
+
+     <button type="button" value="4" onclick="number(value)" >4</button>
+     <button  type="button" value="5" onclick="number(value)"> 5</button>
+     <button type="button" value="6" onclick="number(value)" >6 </button>
+     <button type="button" value="*" onclick="number(value)">* </button>
+    
+     <button type="button" value="7" onclick="number(value)"> 7 </button>
+
+     <button type="button" value="8" onclick="number(value)"> 8 </button>
+     <button type="button" value="9" onclick="number(value)"> 9</button>
+     <button type="button" value="-" onclick="number(value)">-</button>  
+     <button  type="button" value="+" onclick="number(value)"> +</button>
+     <button type="button" value="0" onclick="number(value)"> 0 </button>
+      <button type="button" value="00" onclick="number(value)"> 00 </button>
+      <button type="button" value="=" onclick="equal()">=</button>
+    </div>
+
+          </div>
+    
+        
+    </main>
+
+    </form>
+   <script >
+   
+   function sin(){
+       document.calculator.result.value=Math.sin(document.calculator.result.value) ;
+   }
+   function log(){
+       document.calculator.result.value=Math.log(document.calculator.result.value) ;
+   }
+   function equal(){
+       document.calculator.result.value=eval(document.calculator.result.value);
+   }
+   function cos(){
+	document.calculator.result.value=Math.cos(document.calculator.result.value);
+	}
+
+	function tan(){
+	document.calculator.result.value=Math.tan(document.calculator.result.value);
+	}
+
+	function BACKSPC(){
+	var a = document.calculator.result.value;
+	document.calculator.result.value = a.substr(0, a.length-1);
+	}
+
+	function square(){
+	document.calculator.result.value = Math.pow(document.calculator.result.value, 2);
+	}
+
+	function cubed(){
+	document.calculator.result.value = Math.pow(document.calculator.result.value, 3);
+	}
+
+	function sqrt2(){
+	document.calculator.result.value = Math.pow(document.calculator.result.value, 1/2);
+	}
+
+	function sqrt3(){
+	document.calculator.result.value = Math.pow(document.calculator.result.value, 1/3);
+	}
+   
+	function remv(){
+	document.calculator.result.value=" ";
+	}
+
+   function number(value){
+       document.calculator.result.value += value;
+   }
+  </script>
+
+     </body>
+    
+</html>
